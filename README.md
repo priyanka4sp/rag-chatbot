@@ -19,5 +19,5 @@ This project implements a Retrieval-Augmented Generation (RAG) based AI chatbot 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/rag-chatbot.git
+git clone https://github.com/priyanka4sp/rag-chatbot.git
 cd rag-chatbot
