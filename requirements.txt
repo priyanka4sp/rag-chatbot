@@ -1,0 +1,6 @@
+langchain==0.0.153
+sentence-transformers==2.2.2
+boto3==1.28.36
+pinecone-client==2.2.1
+faiss-cpu==1.7.3
+weaviate-client==3.11.0
