@@ -34,7 +34,7 @@ This project implements a Retrieval-Augmented Generation (RAG) based AI chatbot 
 git clone https://github.com/priyanka4sp/rag-chatbot.git
 cd rag-chatbot
 
-## 2. Install Dependencies
+**## 2. Install Dependencies**
 
 Ensure you have Python installed (3.9 or later). Install the required Python packages:
 
