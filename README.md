@@ -7,12 +7,24 @@ This project implements a Retrieval-Augmented Generation (RAG) based AI chatbot 
 - Uses a vector database (Pinecone) to store and retrieve document embeddings.
 - Integrates with AWS Bedrock (Claude) for generating contextually relevant responses.
 - Deployed on AWS using Lambda and API Gateway.
+
+## Contents
+
+1. Requirements
+2. Setup
+3. Running Locally
+4. Deploying to AWS
+5. Testing the API
+6. Troubleshooting
+7. License
   
 ## Requirements
 
 - Python 3.9 or later
-- AWS account with necessary permissions for Lambda and API Gateway
+- AWS account with necessary permissions for Lambda, IAM and API Gateway
 - Terraform for infrastructure provisioning
+- Pinecone account and API key
+- AWS CLI configured with your credentials
 
 ## Setup
 
@@ -21,3 +33,10 @@ This project implements a Retrieval-Augmented Generation (RAG) based AI chatbot 
 ```bash
 git clone https://github.com/priyanka4sp/rag-chatbot.git
 cd rag-chatbot
+
+## 2. Install Dependencies
+
+Ensure you have Python installed (3.9 or later). Install the required Python packages:
+
+pip install -r requirements.txt
+
