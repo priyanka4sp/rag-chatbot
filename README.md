@@ -130,4 +130,77 @@ You can modify the example query in rag_chatbot.py:
 query = "How do I reset my device?"
 print(f"Response: {rag_chatbot(query)}")
 
-##################################################################################################################################################
+#############################################################################################################################################
+
+Deploying to AWS
+
+1. Package the Lambda Function
+Before deploying, package the Lambda function:
+
+Zip the Source Files:
+cd src
+zip -r ../lambda_deployment_package.zip ./*
+
+2. Deploy Using Terraform
+The project includes a Terraform script (terraform/main.tf) to automate AWS deployment.
+
+Navigate to the Terraform Directory:
+cd ../terraform
+
+Initialize Terraform:
+
+Initialize Terraform to set up the provider plugins:
+
+terraform init
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#####################################################################################################################
+Testing the API
+
+Once the API is deployed, you can test it using cURL, Postman, or any HTTP client.
+
+Example Using cURL
+Replace <API_ENDPOINT> with the actual endpoint provided by AWS API Gateway after deployment:
+
+curl -X POST https://<API_ENDPOINT>/default/chat \
+     -d '{"query": "How do I reset my device?"}' \
+     -H "Content-Type: application/json"
+
+Example Using Postman
+Create a new POST request.
+Set the URL: `https://<API_ENDPOINT>/default/chat`
+Add Headers:
+`Content-Type: application/json`
+
+
+
+
+
+
+
+#####################################################################################################################
+Troubleshooting
+
+Issue: Lambda Errors
+Solution: Check the AWS Lambda logs in CloudWatch for detailed error messages.
+
+Issue: API Gateway 500 Error
+Solution: Verify that all environment variables are correctly set and that the Lambda function has the necessary permissions.
+
+Issue: Pinecone Connection Issues
+Solution: Ensure that the Pinecone API key is correct and that the index is properly configured.
+
+###########################################################################################################################
+
