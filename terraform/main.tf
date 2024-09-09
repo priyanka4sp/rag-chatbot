@@ -15,7 +15,7 @@ resource "aws_lambda_function" "rag_chatbot" {
       AWS_ACCESS_KEY     = var.aws_access_key  # AWS access key
       AWS_SECRET_KEY     = var.aws_secret_key  # AWS secret key
       PINECONE_API_KEY   = var.pinecone_api_key  # Pinecone API key
-      VECTOR_DB_ENDPOINT = "your-vector-db-endpoint"  # Endpoint for the vector database
+      VECTOR_DB_ENDPOINT = "vector-db-endpoint"  # Endpoint for the vector database
     }
   }
 }
