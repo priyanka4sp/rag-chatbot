@@ -117,7 +117,7 @@ Set up the required environment variables for AWS access:
 export AWS_ACCESS_KEY="aws_access_key"
 export AWS_SECRET_KEY="aws_secret_key"
 
-############################################################################################################################################
+################################################## Running Locally ####################################################################
 
 To run the RAG-based chatbot locally and test its functionality:
 
@@ -130,7 +130,7 @@ You can modify the example query in rag_chatbot.py:
 query = "How do I reset my device?"
 print(f"Response: {rag_chatbot(query)}")
 
-#############################################################################################################################################
+################################################# Deploying to AWS ################################################################
 
 Deploying to AWS
 
@@ -144,29 +144,37 @@ zip -r ../lambda_deployment_package.zip ./*
 2. Deploy Using Terraform
 The project includes a Terraform script (terraform/main.tf) to automate AWS deployment.
 
-Navigate to the Terraform Directory:
-cd ../terraform
+  - Navigate to the Terraform Directory:
+    cd ../terraform
 
-Initialize Terraform:
+  - Initialize Terraform:
+    Initialize Terraform to set up the provider plugins:
 
-Initialize Terraform to set up the provider plugins:
+    terraform init
 
-terraform init
+  - Review Terraform Plan:
+    Preview the actions Terraform will take to deploy your resources:
+
+    terraform plan
+
+  - Apply the Terraform Configuration:
+    Deploy the resources to AWS:
+
+    terraform apply
+
+Note: Confirm the deployment by typing yes when prompted. Terraform will output the API endpoint once deployment is complete.
+
+3. Environment Variables in Terraform
+Update the main.tf file in the terraform directory with your AWS credentials and other required variables before running terraform apply.
+
+    variable "aws_access_key" {}
+    variable "aws_secret_key" {}
+    variable "pinecone_api_key" {}
+
+Alternatively, you can provide these as command line arguments or via Terraform's .tfvars file.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-#####################################################################################################################
+#####################################################  Testing the API  ###############################################################
 Testing the API
 
 Once the API is deployed, you can test it using cURL, Postman, or any HTTP client.
@@ -179,18 +187,20 @@ curl -X POST https://<API_ENDPOINT>/default/chat \
      -H "Content-Type: application/json"
 
 Example Using Postman
-Create a new POST request.
-Set the URL: `https://<API_ENDPOINT>/default/chat`
-Add Headers:
-`Content-Type: application/json`
+- Create a new POST request.
+- Set the URL: `https://<API_ENDPOINT>/default/chat`
+- Add Headers:
 
+        `Content-Type: application/json`
 
+- Body:
+          {
+            "query": "How do I reset my device?"
+          }
 
+- Send the request and check the response.
 
-
-
-
-#####################################################################################################################
+##############################################  Troubleshooting  #####################################################
 Troubleshooting
 
 Issue: Lambda Errors
@@ -200,7 +210,10 @@ Issue: API Gateway 500 Error
 Solution: Verify that all environment variables are correctly set and that the Lambda function has the necessary permissions.
 
 Issue: Pinecone Connection Issues
-Solution: Ensure that the Pinecone API key is correct and that the index is properly configured.
+Solution: Ensure that the Pinecone API key is correct and the index is properly configured.
 
 ###########################################################################################################################
+
+Place this `README.md` file in your project's root directory to provide detailed setup and deployment instructions for users of your repository.
+We can always enhance the existing code to make adjustments as per our requirements. Thank you! 
 
