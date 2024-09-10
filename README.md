@@ -50,8 +50,6 @@ export PINECONE_API_KEY="pinecone_api_key"
 
 Here's the complete README.md file content formatted for direct placement in your Git repository. You can copy this content into a README.md file in your project directory.
 
-markdown
-Copy code
 # **RAG-Based AI Chatbot for Technical Support**
 
 This project implements a Retrieval-Augmented Generation (RAG) based AI chatbot designed to provide technical support for customers of a tech company specializing in consumer electronics. The chatbot helps users troubleshoot common issues, provides step-by-step guides, and offers information on warranty and repair services.
@@ -64,13 +62,12 @@ This project implements a Retrieval-Augmented Generation (RAG) based AI chatbot 
 
 ## **Contents**
 
-1. [Requirements](#requirements)
-2. [Setup](#setup)
-3. [Running Locally](#running-locally)
-4. [Deploying to AWS](#deploying-to-aws)
-5. [Testing the API](#testing-the-api)
-6. [Troubleshooting](#troubleshooting)
-7. [License](#license)
+1. Requirements
+2. Setup
+3. Running Locally
+4. Deploying to AWS
+5. Testing the API
+6. Troubleshooting
 
 ## **Requirements**
 
@@ -90,7 +87,7 @@ Clone the repository to your local machine:
 git clone https://github.com/yourusername/rag-chatbot.git
 cd rag-chatbot
 
-2. Install Dependencies
+### **2. Install Dependencies**
 Ensure you have Python installed (3.9 or later). Install the required Python packages:
 
 bash
