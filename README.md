@@ -83,32 +83,27 @@ This project implements a Retrieval-Augmented Generation (RAG) based AI chatbot 
 
 Clone the repository to your local machine:
 
-```bash
 git clone https://github.com/yourusername/rag-chatbot.git
 cd rag-chatbot
 
 ### **2. Install Dependencies**
 Ensure you have Python installed (3.9 or later). Install the required Python packages:
 
-bash
-Copy code
 pip install -r requirements.txt
 
-3. Set Up Pinecone
+### **3. Set Up Pinecone**
 -Sign Up: Create an account at Pinecone.
 -Create an Index: Set up an index in Pinecone to store the document embeddings.
 -API Key: Retrieve your Pinecone API key and add it to your environment variables.
 
-bash
-Copy code
 export PINECONE_API_KEY="your_pinecone_api_key"
 
-4. Configure AWS
+### **4. Configure AWS**
 Ensure your AWS CLI is configured with the necessary permissions:
 
 aws configure
 
-5. Set Up Environment Variables
+### **5. Set Up Environment Variables**
 Set up the required environment variables for AWS access:
 
 export AWS_ACCESS_KEY="aws_access_key"
