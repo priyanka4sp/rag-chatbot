@@ -2,5 +2,3 @@ langchain==0.0.153                # Library for chaining LLMs and retrieval syst
 sentence-transformers==2.2.2      # For creating embeddings from text
 boto3==1.28.36                    # AWS SDK for Python to interact with AWS services
 pinecone-client==2.2.1            # Pinecone client for vector database interaction
-faiss-cpu==1.7.3                  # FAISS library for similarity search and clustering
-weaviate-client==3.11.0           # Client for interacting with Weaviate vector database
