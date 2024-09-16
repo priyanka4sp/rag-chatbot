@@ -13,7 +13,7 @@ def init_vector_retriever():
     # Set up retriever
     retriever = VectorDBRetriever(import pinecone
 from langchain.embeddings import SentenceTransformerEmbeddings  # For creating text embeddings
-from langchain.retrievers import VectorDBRetriever             # LangChain's retriever interface
+from langchain.retrievers import VectorDBRetriever )            # LangChain's retriever interface
 
 def init_vector_retriever():
     """
